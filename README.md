@@ -11,7 +11,7 @@ A simple Flutter app that displays a personal card with name, photo, contact det
 
 ## Screenshot
 
-![App screenshot](assets/flutter_01.png)
+![App screenshot](flutter_01.png)
 
 
 ## Getting Started
