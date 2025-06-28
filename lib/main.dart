@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,12 +23,12 @@ class PersonKort extends StatelessWidget {
   const PersonKort({super.key});
 
   // function to open links :D
-  void _launchUrl(String url) async {
+  static void _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      throw 'Error Could not open $url';
+      print('Could not launch $url');
     }
   }
 
@@ -59,7 +60,7 @@ class PersonKort extends StatelessWidget {
             const SizedBox(height: 8),
 
             const Text(
-              'Data Analyst/Statistician',
+              'Statistician',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
             const SizedBox(height: 20),
@@ -70,7 +71,7 @@ class PersonKort extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  children: const [
+                  children: [
                     Row(
                       children: [
                         Icon(Icons.email),
@@ -86,12 +87,28 @@ class PersonKort extends StatelessWidget {
                         Text('Phone: +46 70 734 29 94'),
                       ],
                     ),
-                    Row(
-                      children: [
-                        Icon(Icons.school),
-                        SizedBox(width: 10),
-                        Text('Location: Linköping University'),
-                      ],
+                    const SizedBox(height: 10),
+
+                    InkWell(
+                      onTap: () {
+                        _launchUrl('https://www.linkedin.com/in/ludwigenvall');
+                      },
+                      child: Row(
+                        children: [
+                          const FaIcon(
+                            FontAwesomeIcons.linkedin,
+                            color: Color(0xFF0A66C2),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text(
+                            'LinkedIn.com/in/ludwigenvall',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              decoration: TextDecoration.underline,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
