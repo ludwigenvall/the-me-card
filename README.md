@@ -10,8 +10,7 @@ A simple Flutter app that displays a personal card with name, photo, contact det
 - Clean design using `google_fonts` and `font_awesome_flutter`
 
 ## Screenshot
-
-![App screenshot](flutter_01.png)
+<img src="flutter_01.png" alt="App screenshot" width="300"/>
 
 
 ## Getting Started
