@@ -1,4 +1,4 @@
-# Personal Card App – Ludwig Envall
+# Personal Card App - Ludwig Envall
 
 A simple Flutter app that displays a personal card with name, photo, contact details, and a clickable LinkedIn link.
 
@@ -58,9 +58,9 @@ launchUrl(uri, mode: LaunchMode.externalApplication);
 
 ## Packages Used
 
-- [`url_launcher`](https://pub.dev/packages/url_launcher) – to open external links  
-- [`google_fonts`](https://pub.dev/packages/google_fonts) – for custom fonts  
-- [`font_awesome_flutter`](https://pub.dev/packages/font_awesome_flutter) – for social media icons
+- [`url_launcher`](https://pub.dev/packages/url_launcher) - to open external links  
+- [`google_fonts`](https://pub.dev/packages/google_fonts) - for custom fonts  
+- [`font_awesome_flutter`](https://pub.dev/packages/font_awesome_flutter) - for social media icons
 
 ## Contact
 
