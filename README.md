@@ -1,16 +1,74 @@
-# my_app
+# Personal Card App – Ludwig Envall
 
-A new Flutter project.
+A simple Flutter app that displays a personal card with name, photo, contact details, and a clickable LinkedIn link.
+
+## Features
+
+- Displays name, job title, and contact information  
+- Profile picture via `assets/ludwig.jpg`  
+- Clickable link to LinkedIn profile  
+- Clean design using `google_fonts` and `font_awesome_flutter`
+
+## Screenshot
+
+![App screenshot](assets/flutter_01.png)
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK installed: https://docs.flutter.dev/get-started/install  
+- Android Studio or another IDE with Flutter plugin  
+- An emulator **with Google Play** or a physical Android device (required to open external links)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone this repo or copy the source code  
+2. Run:
+
+```bash
+flutter pub get
+```
+
+3. Add your profile image to `assets/ludwig.jpg`  
+4. Launch the app:
+
+```bash
+flutter run
+```
+
+### Important: Android Permissions
+
+Make sure your `AndroidManifest.xml` includes:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+### Having Trouble Opening Links?
+
+If the LinkedIn link (or any external link) doesn't open:
+
+- Make sure you're running the app on a device/emulator **with a web browser installed**
+- Use `url_launcher` with `LaunchMode.externalApplication`:
+
+```dart
+launchUrl(uri, mode: LaunchMode.externalApplication);
+```
+
+## Packages Used
+
+- [`url_launcher`](https://pub.dev/packages/url_launcher) – to open external links  
+- [`google_fonts`](https://pub.dev/packages/google_fonts) – for custom fonts  
+- [`font_awesome_flutter`](https://pub.dev/packages/font_awesome_flutter) – for social media icons
+
+## Contact
+
+📧 ludwigenv@gmail.com  
+📱 +46 70 734 29 94  
+🔗 [LinkedIn](https://www.linkedin.com/in/ludwigenvall)
+
+---
+
+© 2025 Ludwig Envall
