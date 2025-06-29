@@ -46,7 +46,7 @@ class PersonKort extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 100,
-              backgroundImage: AssetImage('assets/ludwig.jpg'),
+              backgroundImage: AssetImage('assets/picture.jpg'),
             ),
             const SizedBox(height: 20),
 
@@ -54,14 +54,14 @@ class PersonKort extends StatelessWidget {
               'Ludwig Envall',
               style: GoogleFonts.cagliostro(
                 fontSize: 40,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
 
             const Text(
               'Statistician',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 25),
             ),
             const SizedBox(height: 20),
 
@@ -74,17 +74,17 @@ class PersonKort extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.email),
+                        Icon(Icons.email), //mail icon
                         SizedBox(width: 10),
-                        Text('Email: ludwigenv@gmail.com'),
+                        Text('Email: ludwigenv@gmail.com'), // my gmail
                       ],
                     ),
                     SizedBox(height: 10),
                     Row(
                       children: [
-                        Icon(Icons.phone),
+                        Icon(Icons.phone), // phone icon
                         SizedBox(width: 10),
-                        Text('Phone: +46 70 734 29 94'),
+                        Text('Phone: +46 70 734 34 34'), // not my number
                       ],
                     ),
                     const SizedBox(height: 10),
@@ -96,8 +96,8 @@ class PersonKort extends StatelessWidget {
                       child: Row(
                         children: [
                           const FaIcon(
-                            FontAwesomeIcons.linkedin,
-                            color: Color(0xFF0A66C2),
+                            FontAwesomeIcons.linkedin, // LinkedIn icon
+                            color: Color(0xFF0A66C2), //LinkedIn blue
                           ),
                           const SizedBox(width: 10),
                           const Text(
